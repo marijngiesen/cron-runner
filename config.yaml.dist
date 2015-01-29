@@ -1,0 +1,14 @@
+database:
+  db: <database>
+  host: <host>
+  user: <user>
+  passwd: <passwd>
+notifications:
+  hubot:
+    enabled: <true|false>
+    url: <url>
+    room: <room>
+  email:
+    enabled: <true|false>
+    server: <server>
+    address: <address>
