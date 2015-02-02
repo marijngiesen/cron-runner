@@ -45,10 +45,13 @@ class Cron(Base):
                 self.log.status = "ok"
 
         self.log.save()
-        self.debug("ended at: %s" % self.log.endtime, "runtime: %s" % str(runtime), "status: %s" % self.log.status,
-                   "sending notifications")
-        notification = Notification(self.log)
-        notification.send()
+        self.debug("ended at: %s" % self.log.endtime, "runtime: %s" % str(runtime), "status: %s" % self.log.status)
+
+        if self.job.notify:
+            self.debug("sending notifications")
+            notification = Notification(self.log)
+            notification.send()
+
         self.debug("finished")
 
     def _execute(self, nolock=False):
