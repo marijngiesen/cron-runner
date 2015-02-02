@@ -1,6 +1,7 @@
 import socket
 from datetime import datetime
 from subprocess import Popen, PIPE, STDOUT
+import sys
 
 from base import Base
 from database import Job, Log
@@ -27,7 +28,9 @@ class Cron(Base):
             self.debug("started", "command: %s" % self.job.command, "started at: %s" % self.log.starttime)
 
             self._execute()
-
+        except Job.DoesNotExist:
+            self.logger.error("Job %s does not exist" % name)
+            sys.exit(1)
         except Exception, e:
             self.log.error = e
             self.log.status = "failed"
