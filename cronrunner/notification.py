@@ -26,7 +26,7 @@ class Notification(Base):
         import requests
 
         url = "%s/%s" % (self.config["hubot"]["url"], self.config["hubot"]["room"])
-        message = "*Cron '%s' on _%s_ %s*\n>Started at: %s\n>Ended at: %s\n>Runtime: %s" % (
+        message = "*Cron '%s' on _%s_ has status _%s_*\n>Started at: %s\n>Ended at: %s\n>Runtime: %s" % (
             self.log.job.name, self.log.server, self.log.status.upper(), self.log.starttime, self.log.endtime,
             str(self.log.endtime - self.log.starttime))
         headers = {"content-type": "application/x-www-form-urlencoded"}
