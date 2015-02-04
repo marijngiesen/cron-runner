@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='cronrunner',
+    name='cron-runner',
     version='0.0.1',
     packages=['cronrunner'],
     package_dir={'cronrunner': 'cronrunner'},
