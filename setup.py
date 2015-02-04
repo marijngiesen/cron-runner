@@ -16,5 +16,5 @@ setup(
             'cron-runner = cronrunner.main:main',
         ]
     },
-    requires=['requests', 'peewee', 'pyyaml', 'commandr'],
+    install_requires=['requests', 'peewee', 'pyyaml', 'commandr', 'MySQLdb'],
 )
