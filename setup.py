@@ -17,5 +17,5 @@ setup(
         ]
     },
     requires=['requests', 'peewee', 'pyyaml', 'commandr'],
-    # data_files=[('/etc', ['etc/cron-runner.yaml.dist'])]
+    data_files=[('/etc', ['config/cron-runner.yaml.dist'])]
 )
