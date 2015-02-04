@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='cron-runner',
-    version='0.0.1',
+    version='0.0.2',
     packages=['cronrunner'],
     package_dir={'cronrunner': 'cronrunner'},
     package_data={'cronrunner': ['config/*']},
