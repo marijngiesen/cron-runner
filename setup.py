@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='cron-runner',
+    name='cronrunner',
     version='0.0.1',
     packages=['cronrunner'],
     package_dir={'cronrunner': 'cronrunner'},
@@ -17,5 +17,4 @@ setup(
         ]
     },
     requires=['requests', 'peewee', 'pyyaml', 'commandr'],
-    # data_files=[('/etc', ['config/cron-runner.yaml.dist'])]
 )
