@@ -1,3 +1,4 @@
+import glob
 from setuptools import setup
 
 setup(
@@ -16,5 +17,8 @@ setup(
             'cron-runner = cronrunner.main:main',
         ]
     },
-    install_requires=['requests', 'peewee', 'pyyaml', 'commandr', 'MySQLdb'],
+    install_requires=['requests', 'peewee', 'pyyaml', 'commandr', 'MySQL-python'],
+    data_files=[
+        ('/etc/cron-runner', glob.glob('config/*')),
+    ]
 )
