@@ -17,6 +17,6 @@ setup(
     },
     install_requires=['requests', 'peewee', 'pyyaml', 'commandr', 'MySQL-python'],
     data_files=[
-        ('/etc/cron-runner', glob.glob('config/*')),
+        ('/etc/cron-runner.yaml', 'config/cron-runner.yaml.dist'),
     ]
 )
