@@ -5,8 +5,6 @@ setup(
     name='cron-runner',
     version='0.0.2',
     packages=['cronrunner'],
-    package_dir={'cronrunner': 'cronrunner'},
-    package_data={'cronrunner': ['config/*']},
     url='https://github.com/marijngiesen/cron-runner',
     license='Apache 2.0',
     author='Marijn Giesen',
